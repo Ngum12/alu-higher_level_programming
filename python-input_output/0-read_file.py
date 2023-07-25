@@ -1,8 +1,19 @@
 #!/usr/bin/python3
-"""function that reads a text file (UTF8) and prints it to stdout"""
+"""
+Module 1-number_of_lines
+
+Contains function that returns number of lines in text"""
 
 
-def read_file(filename=""):
-    """Print the contents of a UTF8 text file to stdout."""
-    with open(filename, encoding="utf-8") as f:
-        print(f.read(), end="")
+def write_file(filename="", text=""):
+    """
+    Function that writes to a text file.
+    Args:
+        filename: filename
+        text: text to write
+    Raises:
+        Exception: when the file can be opened
+    """
+
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
